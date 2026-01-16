@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-buttons">
+        <button onclick="showSignup()">Sign Up</button>
+        <button onclick="showLogin()">Login</button>
+    </div>
+
+    <!-- SIGN UP -->
+    <form id="signupForm" class="form active">
+        <h2>Sign Up</h2>
+
+        <input type="text" id="fname" placeholder="First Name">
+        <input type="text" id="lname" placeholder="Last Name">
+        <input type="text" id="signupUsername" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+
+        <div class="password-field">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <span onclick="togglePassword('signupPassword')">👁</span>
+        </div>
+
+        <p class="error" id="signupError"></p>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <!-- LOGIN -->
+    <form id="loginForm" class="form">
+        <h2>Login</h2>
+
+        <input type="text" id="loginUsername" placeholder="Username">
+
+        <div class="password-field">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <span onclick="togglePassword('loginPassword')">👁</span>
+        </div>
+
+        <p class="error" id="loginError"></p>
+
+        <button type="submit">Login</button>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
